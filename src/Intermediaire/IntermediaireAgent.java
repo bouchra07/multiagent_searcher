@@ -69,12 +69,12 @@ public class IntermediaireAgent  extends Agent{
 			
 				else if(aclMessage11!=null){
 					
-					String driver = aclMessage11.getUserDefinedParameter("driver");
-					String marque = aclMessage11.getUserDefinedParameter("marque");
+					String description = aclMessage11.getUserDefinedParameter("description");
+					String brand = aclMessage11.getUserDefinedParameter("brand");
 					String type = aclMessage11.getUserDefinedParameter("type");
 					//List<String> infoo = new ArrayList<String>();
-					//infoo.add(driver);
-					//infoo.add(marque);
+					//infoo.add(description);
+					//infoo.add(brand);
 					//infoo.add(type);
 					ACLMessage aclMessage2 = new ACLMessage(ACLMessage.INFORM);
 					aclMessage2.addReceiver(new AID("utilisateur1",AID.ISLOCALNAME));
@@ -84,14 +84,14 @@ public class IntermediaireAgent  extends Agent{
 					
 					
 					try {
-						aclMessage2.addUserDefinedParameter("driver", driver);
-						aclMessage2.addUserDefinedParameter("marque", marque);
+						aclMessage2.addUserDefinedParameter("description", description);
+						aclMessage2.addUserDefinedParameter("brand", brand);
 						aclMessage2.addUserDefinedParameter("type", type);
 						aclMessage2.setOntology("resfin");
 						
 					} catch (NullPointerException e) {
-						aclMessage2.addUserDefinedParameter("driver","---");
-						aclMessage2.addUserDefinedParameter("marque","---");
+						aclMessage2.addUserDefinedParameter("description","---");
+						aclMessage2.addUserDefinedParameter("brand","---");
 						aclMessage2.addUserDefinedParameter("type","---");
 					}
 

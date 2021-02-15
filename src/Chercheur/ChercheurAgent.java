@@ -63,13 +63,13 @@ public class ChercheurAgent  extends Agent{
 					aclMessage1.setContent(aclMessage.getContent());
 					aclMessage1.setOntology("resultatfin");
 					try {
-						aclMessage1.addUserDefinedParameter("driver", information.getDriver());
-						aclMessage1.addUserDefinedParameter("marque", information.getMarque());
+						aclMessage1.addUserDefinedParameter("description", information.getDescription());
+						aclMessage1.addUserDefinedParameter("brand", information.getBrand());
 						aclMessage1.addUserDefinedParameter("type", information.getType());
 						
 					} catch (NullPointerException e) {
-						aclMessage1.addUserDefinedParameter("driver","---");
-						aclMessage1.addUserDefinedParameter("marque","---");
+						aclMessage1.addUserDefinedParameter("description","---");
+						aclMessage1.addUserDefinedParameter("brand","---");
 						aclMessage1.addUserDefinedParameter("type","---");
 					}
 

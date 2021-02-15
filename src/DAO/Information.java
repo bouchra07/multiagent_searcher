@@ -2,8 +2,8 @@ package DAO;
 
 public class Information {
 	private int id;
-	private String driver;
-	private String marque;
+	private String description;
+	private String brand;
 	private String type;
 	
 
@@ -16,17 +16,17 @@ public class Information {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String getDriver() {
-		return driver;
+	public String getDescription() {
+		return description;
 	}
-	public void setDriver(String driver) {
-		this.driver = driver;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public String getMarque() {
-		return marque;
+	public String getBrand() {
+		return brand;
 	}
-	public void setMarque(String marque) {
-		this.marque = marque;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 	
 	public int getId() {
@@ -35,11 +35,11 @@ public class Information {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Information(int id, String marque, String driver,String type) {
+	public Information(int id, String brand, String description,String type) {
 		super();
 		this.id = id;
-		this.driver = driver;
-		this.marque = marque;
+		this.description = description;
+		this.brand = brand;
 
 		this.type = type;
 	}

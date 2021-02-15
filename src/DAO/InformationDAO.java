@@ -17,12 +17,12 @@ public class InformationDAO  {
 	}
 
 
-public Information  FindInformationByNom(String Marque, String Type){
+public Information  FindInformationByNom(String Brand, String Type){
 		
 		
 		Information information = null;
 	
-		String requette = "select *  from information where Marque ='"+Marque+"' and Type ='"+Type+"'";
+		String requette = "select *  from laptops where Brand ='"+Brand+"' and Type ='"+Type+"'";
 	
 		try {
 			

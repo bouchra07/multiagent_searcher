@@ -32,17 +32,17 @@ public class UtilisateurAgent  extends GuiAgent{
 				MessageTemplate messageTemplate1 = MessageTemplate.and(MessageTemplate.MatchPerformative(ACLMessage.INFORM), MessageTemplate.MatchOntology("resfin"));
 				ACLMessage aclMessage1 = receive(messageTemplate1);
 				if(aclMessage1!=null){
-					String driver = aclMessage1.getUserDefinedParameter("driver");
-					String marque = aclMessage1.getUserDefinedParameter("marque");
+					String description = aclMessage1.getUserDefinedParameter("description");
+					String brand = aclMessage1.getUserDefinedParameter("brand");
 					String type = aclMessage1.getUserDefinedParameter("type");
-					System.out.println(driver);
+					System.out.println(description);
 					
 					
 					
-					if(driver.length() != 3){
+					if(description.length() != 3){
 						gui.showMessage("\n"
 					
-							+ "Le conducteur de la voiture "+marque+" et de type "+type+" est : \n"+driver+"\n");
+							+ "The laptops with the brand "+brand+" and type "+description+" are : \n"+type+"\n");
 						}
 					
 					else{
@@ -71,12 +71,12 @@ public class UtilisateurAgent  extends GuiAgent{
 		
 		switch(ev.getType()){
 		case 1:
-			String marque = (String) ev.getParameter(0);
+			String brand = (String) ev.getParameter(0);
 			String type = (String) ev.getParameter(1);
 			List<String> list =new ArrayList<String>();
-			list.add(marque);
+			list.add(brand);
 			list.add(type);
-			System.out.println(marque+"      "+type);
+			System.out.println(brand+"      "+type);
 			
 			ACLMessage aclMessage = new ACLMessage(ACLMessage.REQUEST);
 			aclMessage.addReceiver(new AID("intermediaire1",AID.ISLOCALNAME));

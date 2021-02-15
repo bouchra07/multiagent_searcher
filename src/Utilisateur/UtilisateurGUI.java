@@ -131,7 +131,7 @@ public class UtilisateurGUI extends JFrame {
 		marque.setFont(new Font("Tahoma", Font.BOLD, 16));
 		marque.setColumns(10);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("automatic");
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Gamer");
 		rdbtnNewRadioButton.setBounds(189, 51, 99, 23);
 		rdbtnNewRadioButton.setBackground(SystemColor.inactiveCaption);
 		rdbtnNewRadioButton.setSelected(true);
